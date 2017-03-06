@@ -1,0 +1,23 @@
+Bài tập về nhà
+1.Tạo file product.txt lưu dưới dạng
+ProdID,prod name, price, description 
+1,milk,500,vinamilk
+.....
+2.<a>go to product </a> index.jsp
+3. show product dưới dạng bảng + tạo button add trên bảng  product.jsp
+|_PROD_NAME__||_Description__||_Price__||_______|
+  Milk           __________      500       [Add]
+  Sugar          __________      1000      [Add]
+.......  
+4.click add button -> ORDER.JSP ->xử lý trong session
+|checkbox|_PROD_NAME__||_Description__||_Price__||Quantity|
+    x        Milk         __________      500       20
+             Sugar        __________      1000      5 
+
+
+                    |Update| |Remove|  |Continue| |Checkout|  
+                   
+Thêm khung để add số lượng Quantity [Quantity]:  button : Update ->update quantity vào session Remove->remove trong session
+Show từ session để show
+Continue -> product.jsp 
+Checkout -> save giỏ hàn vào file order.txt -> message checked out succesfully!!!
