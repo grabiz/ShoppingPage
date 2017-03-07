@@ -27,6 +27,7 @@ public class LoadData extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+       
         ServletContext sc=getServletContext();
         String path = sc.getRealPath("/data/productList.txt");
         FileReader reader = null;

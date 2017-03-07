@@ -4,6 +4,7 @@
     Author     : NGUYEN
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
@@ -14,28 +15,31 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <h1>Your cart</h1>
-        <form action="">
+        <h1>Your cart</h1>  
+        <form action="orderProcessing" method="post">
         <table>
                 <tr>
-                    <th>Product ID</th>
+                    <th>Remove</th>
                     <th>Product Name</th>
                     <th>Product Price</th>
                     <th>Product Description</th>
-                    <th>Add</th>
+                    <th>Quantity</th>
                 </tr>
-
-                <c:forEach var="product" items="${sessionScope.prodList}">
-                    <tr>
-                        <td> ${product.prodID}</td>
-                        <td>${product.prodName} </td>
-                        <td>${product.prodPrice} </td>
-                        <td>${product.prodDescription} </td>
-                        <td class="lastColumn"><form action="add" method="post">
-                                <input type="hidden" name="getValue" value="${product.prodID}"/>
-                                <input type="submit" id="submit" value="Add to cart"></form> </td>
-                    </tr>
+          
+                <c:forEach var="product" items="${sessionScope.prodAddedList}">
+                            <tr>
+                                <td><input type="checkbox" name="checkbox" value="0"></td>
+                                <td>${product.prodName} </td>
+                                <td>${product.prodPrice} </td>
+                                <td>${product.prodDescription} </td>
+                                <td><input type="number" name="quantity" ></td>
+                            </tr>
                 </c:forEach>
             </table>
+            <input type="submit" name="action" value="Update cart">
+            <input type="submit" name="action" value="Remove product">
+            <input type="submit" name="action" value="Continue shopping">
+            <input type="submit" name="action" value="Checkout">
+        </form>
     </body>
 </html>
