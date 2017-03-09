@@ -1,0 +1,5 @@
+0,One Piece,18000, NXB Kim Dong
+1,Naruto ,20000, NXB TVM
+2,Bleach ,16000, NXB Tre
+3,Hikaru no Go ,18000, NXB Kim Dong
+4,HunterXHunter ,20000, NXB Tre
